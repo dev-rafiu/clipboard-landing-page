@@ -1,0 +1,72 @@
+// @use "variables";
+
+h1,
+h2,
+h3 {
+  color: var(--dark-grayish-blue);
+  margin-bottom: 0.7rem;
+  line-height: 1;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  color: var(--grayish-blue);
+  max-width: 350px;
+  margin: 0 auto;
+  line-height: 1.4;
+  // background: green;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a.bg-cyan,
+a.bg-light-blue {
+  padding: 0.7rem 2rem;
+  border-radius: 2rem;
+  transition: opacity 0.25s ease;
+}
+
+a.bg-cyan:hover,
+a.bg-light-blue:hover {
+  opacity: 0.8;
+}
+
+a.bg-cyan {
+  background: var(--strong-cyan);
+}
+
+a.bg-light-blue {
+  background: var(--light-blue);
+}
+
+.download-links {
+  padding: 2rem 0;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.img-container {
+  margin-top: 1rem;
+  // border: 1px solid pink;
+
+  img {
+    width: min(100%, 25rem);
+    margin: 0 auto;
+  }
+}
+
+.logo-container {
+  margin-bottom: 1rem;
+
+  .logo {
+    transform: scale(0.8);
+  }
+}

@@ -1,0 +1,155 @@
+%flex {
+  display: flex;
+  align-items: center;
+}
+
+main > * {
+  text-align: center;
+  padding: 0 2rem;
+}
+
+main > *:not(.footer) {
+  margin-bottom: 4rem;
+}
+
+.header {
+  background-image: url(../images/bg-header-mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-block: 3rem;
+}
+
+// snippets
+.snippets {
+  .container,
+  .advantages {
+    @extend %flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .container {
+    margin-top: 1rem;
+  }
+}
+
+// tools
+.tools {
+  .container {
+    margin-top: 1rem;
+    @extend %flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    img {
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+// companies
+.companies {
+  @extend %flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 0;
+  // background: pink;
+}
+
+// footer
+.footer {
+  background: hsl(0, 0%, 90%);
+  padding: 2rem 0;
+
+  .links {
+    @extend %flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1.5rem 0;
+
+    a {
+      color: var(--dark-grayish-blue);
+      transition: color 0.25s ease;
+      // font-size: 0.9rem;
+    }
+    a:hover {
+      color: #000;
+    }
+  }
+
+  .socials {
+    @extend %flex;
+    justify-content: center;
+    gap: 2rem;
+
+    img {
+      cursor: pointer;
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .download-links {
+    flex-direction: row;
+  }
+
+  .logo-container {
+    .logo {
+      transform: scale(1);
+    }
+  }
+
+  .header {
+    background-image: url(../images/bg-header-desktop.png);
+  }
+
+  .snippets {
+    .container {
+      flex-direction: row;
+      justify-content: center;
+      // gap: 0;
+
+      .img-container {
+        height: 25rem;
+        // border: 1px solid pink;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        // object-fit: contain;
+      }
+    }
+
+    .advantages {
+      text-align: left;
+      gap: 1rem;
+    }
+  }
+
+  .tools {
+    .container {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+  .companies {
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    .logo-container {
+      margin: 0;
+    }
+
+    .links {
+      flex-direction: row;
+      margin: 0;
+    }
+  }
+}
